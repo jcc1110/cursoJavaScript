@@ -64,6 +64,8 @@ function someFun(par){
 };
 */
 
+//Arrays
+/*
 var names = ['Raul', 'Pedro', 'John'];
 var years = new Array(1975,2001,1964);
 
@@ -89,3 +91,54 @@ console.log(ArrayOfRaul.shift()); //quita un elemento del principio
 console.log(ArrayOfRaul);
 console.log(ArrayOfRaul.unshift('test')); //agrega un elemento al principio
 console.log(ArrayOfRaul);
+*/
+
+//Objets
+
+/* var raul = {
+    name: 'Raul',
+    lastName: 'Burgos',
+    yearOfBirth: 1975,
+    job: 'Sales man',
+    isMarried: true    
+}
+
+//acceso a los valores de las propiedades
+console.log(raul.name + ' ' + raul.lastName);
+console.log(raul['yearOfBirth']);
+
+//acceso a una propiedad mediante una variable con el nombre de la propiedad
+
+var elTrabajo = 'job';
+console.log(raul[elTrabajo]);
+
+//Creacion del objeto en linea
+var manuel = new Object();
+manuel.name = 'Manuel';
+manuel.lastName = 'Murray';
+manuel.yearOfBirth = 1977;
+manuel.job = 'Programmer';
+manuel.isMarried = false;
+
+console.log(manuel); */
+
+//Objetos y metodos
+var raul = {
+    name: 'Raul',
+    lastName: 'Burgos',
+    yearOfBirth: 1975,
+    job: 'Sales man',
+    isMarried: true,
+    family: ['Sofia', 'Jimena', 'Corina', 'Elena'],
+    /*calculateAge: function() {
+        return 2018 - this.yearOfBirth;
+    }*/
+    calculateAge: function() {
+        this.age = 2018 - this.yearOfBirth;
+    }
+}
+
+console.log(raul);
+raul.calculateAge();
+
+console.log(raul.age);
