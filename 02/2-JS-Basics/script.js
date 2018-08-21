@@ -52,3 +52,40 @@ if (scoreJohn > scoreMike && scoreJohn > scoreRaul) {
 } else {
     alert('it\'s a draw');
 }
+
+//Hay que notar que esta solucion no considera el empate de dos jugadores y uno con menor score
+
+/*Expresion produce un valor:
+3+2;
+var x=3;
+Un statement no produce un valor inmediato:
+function someFun(par){
+    //code
+};
+*/
+
+var names = ['Raul', 'Pedro', 'John'];
+var years = new Array(1975,2001,1964);
+
+var ArrayOfRaul = ['Raul', 'Burgos', 1975, 'rojo', true, 'sales man'];
+
+console.log(names[0]);
+console.log(names[1]);
+console.log(names[2]);
+console.log(ArrayOfRaul);
+console.log(ArrayOfRaul.indexOf(1975));
+console.log(ArrayOfRaul.indexOf('Burgos'));
+if (ArrayOfRaul.indexOf('programer') === -1){
+    console.log('Raul is not a programer');
+} else {
+    console.log('Raul is a programer');
+}
+console.log(ArrayOfRaul);
+console.log(ArrayOfRaul.push('Azules')); //agrega un elemento al final
+console.log(ArrayOfRaul);
+console.log(ArrayOfRaul.pop()); //quita un elemento del final
+console.log(ArrayOfRaul);
+console.log(ArrayOfRaul.shift()); //quita un elemento del principio
+console.log(ArrayOfRaul);
+console.log(ArrayOfRaul.unshift('test')); //agrega un elemento al principio
+console.log(ArrayOfRaul);
