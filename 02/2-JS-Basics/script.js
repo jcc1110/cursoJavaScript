@@ -11,19 +11,19 @@ console.log("His complete name is " + name + " " + lastName + " and he is " + ag
 con la mayor estatura (en centimetros) mas 5 veces su edad ganará.
 */
 
-var jhonHeight = 172;
+/*var jhonHeight = 172;
 var mikeHeight = 172;
 var raulHeight = 172;
 var johnAge = 26;
 var mikeAge = 24;
 var raulAge = 26;
 scoreJohn = scoreMike = scoreRaul = 0;
-
+*/
 /*jhonHeight= prompt("How many centimeters does John mesure?:");
 mikeHeight = prompt("How many centimeters does John's friend mesure?: ");
 
 johnAge = prompt("How old is John: ");
-mikeAge = prompt("How old is John's firned: ");*/
+mikeAge = prompt("How old is John's firned: ");
 
 scoreJohn = jhonHeight + 5 * johnAge;
 scoreMike = mikeHeight + 5 * mikeAge;
@@ -41,7 +41,7 @@ console.log("Raul's scrore is: " + scoreRaul);
 } else {
     alert("The winer is Jhon's friend with " + scoreMike + " points!");
 }
-*/
+
 
 if (scoreJohn > scoreMike && scoreJohn > scoreRaul) {
     alert("The winer is Jhon with " + scoreJohn + " points!" );    
@@ -161,14 +161,30 @@ Example output: [true, false, true]
 Hint: you can use a loop not only to read from an array, like y[i], but also to set values in an array, like y[i] = ... You can also use the specific array methods.
 */
 
-var persons = new Array([1975, 1998, 1985,2005]);
-
-var empty = new Array([]);
-
-function calculateAge(yearOfBirth) {
-    return 2018-yearOfBirth;
-};
+//var persons = new Array(1975, 1998, 1985,2005);
+var persons = [1975, 2018, 1985,2005];
 
 
+function printFullAge(persons=[]){
+    var i=0;    
+    var mayor=[];
+    var ages = [];
+    for (i=0; i<persons.length; i++){
+        ages.push(2018 - persons[i]);
+    }
+    for(i=0; i<ages.length;i++){
+        persona=i+1;
+        if(ages[i]>=18){
+            console.log("La persona " + persona + " nacida en " + persons[i] + " Es mayor de edad, puesto que tiene " + ages[i] + " años.");
+            mayor.push(true);
+        }else{
+            console.log("La persona " + persona + " nacida en " + persons[i] + " NO es mayor de edad, puesto que tiene " + ages[i] + " años.");
+            mayor.push(false);
+        }
+    }    
+    return mayor;
+}
 
+var losMayores = printFullAge(persons);
+console.log(losMayores);
 
